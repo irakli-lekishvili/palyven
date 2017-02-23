@@ -6,5 +6,7 @@
 /benchmark/fixtures
 /examples/*/js
 /coverage
+/npm-debug.log
+/public/js
 .DS_Store
 *.log
