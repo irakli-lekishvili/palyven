@@ -1,11 +1,4 @@
 import ReactDOM from 'react-dom'
+import { Root } from 'components'
 
-class Ravi extends React.Component {
-  render () {
-    return (
-      <h1>From React</h1>
-    )
-  }
-}
-
-ReactDOM.render(<Ravi />, document.getElementById('app'))
+ReactDOM.render(<Root />, document.getElementById('app'))

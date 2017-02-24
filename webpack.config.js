@@ -1,12 +1,11 @@
 var path = require('path')
 var webpack = require('webpack')
-var webpackMerge = require('webpack-merge')
 
 module.exports = () => ({
   target: 'web',
-  // devtool: 'source-map',
+  devtool: 'source-map',
   entry: {
-    entry: './app'
+    entry: ['babel-polyfill', './app']
   },
   output: {
     filename: 'app.js',
@@ -24,6 +23,12 @@ module.exports = () => ({
         exclude: [/node_modules/],
         loaders: ['babel-loader']
       }
+    ]
+  },
+  resolve: {
+    modules: [
+      path.join(__dirname, 'app'),
+      'node_modules'
     ]
   },
   plugins: [
